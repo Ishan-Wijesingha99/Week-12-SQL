@@ -1,0 +1,3 @@
+a relational database organises data into tables with rows and columns.
+
+What does a query do in SQL?
