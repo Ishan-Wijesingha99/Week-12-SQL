@@ -16,7 +16,7 @@ const db = mysql.createConnection(
     // MySQL username,
     user: 'root',
     // MySQL password
-    password: '',
+    password: 'mysqlishan99',
     database: 'courses_db'
   },
   console.log(`Connected to the courses_db database.`)
@@ -26,13 +26,13 @@ const db = mysql.createConnection(
 
 db.query(`DELETE FROM course_names WHERE id = ?`, 3, (err, result) => {
   if (err) {
-    console.log(err);
+    return console.log(err);
   }
   console.log(result);
 });
 
 // Query database
-db.query('SELECT * FROM course_names', function (err, results) {
+db.query('SELECT * FROM course_names', (err, results) => {
   console.log(results);
 });
 
